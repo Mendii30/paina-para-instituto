@@ -18,11 +18,11 @@ const Gallery: React.FC = () => {
     const closeModal = () => setSelectedImage(null);
 
     return (
-        <section className="py-20 bg-neutral-200">
+        <section id="galeria" className="py-20 bg-light-theme-bg dark:bg-dark-blue-900">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-extrabold text-primary-dark">Galería de Momentos</h2>
-                    <p className="mt-4 text-lg text-neutral-500 max-w-2xl mx-auto">
+                    <h2 className="text-4xl font-extrabold text-light-theme-text dark:text-light-text-heading">Galería de Momentos</h2>
+                    <p className="mt-4 text-lg text-light-theme-text-secondary dark:text-light-text-secondary max-w-2xl mx-auto">
                         Un vistazo a la vida y los eventos en nuestro instituto.
                     </p>
                 </div>
@@ -43,7 +43,7 @@ const Gallery: React.FC = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4" onClick={closeModal}>
                     <div className="relative max-w-4xl max-h-full" onClick={(e) => e.stopPropagation()}>
                         <img src={selectedImage.src} alt={selectedImage.alt} className="rounded-lg shadow-2xl object-contain max-w-full max-h-[90vh]" />
-                        <button onClick={closeModal} className="absolute -top-4 -right-4 bg-white text-neutral-900 rounded-full h-10 w-10 flex items-center justify-center text-2xl font-bold shadow-lg">&times;</button>
+                        <button onClick={closeModal} className="absolute -top-4 -right-4 bg-light-theme-card dark:bg-dark-blue-700 text-light-theme-text dark:text-light-text-heading rounded-full h-10 w-10 flex items-center justify-center text-2xl font-bold shadow-lg">&times;</button>
                         <p className="text-white text-center mt-2">{selectedImage.alt}</p>
                     </div>
                 </div>

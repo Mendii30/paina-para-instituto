@@ -8,33 +8,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ['Montserrat', 'sans-serif'],
             },
             colors: {
-              primary: {
-                DEFAULT: '#0D47A1', // A deep, professional blue
-                light: '#1E88E5',
-                dark: '#0D47A1',
+              'light-theme': {
+                bg: '#fef9e7', // Soft, pale yellow
+                'bg-alt': '#ffffff', // Pure white for alternating sections
+                text: '#0b132b', // Dark blue text for high contrast
+                'text-secondary': '#3a506b', // Muted text
+                border: '#e2e8f0',
+                card: '#ffffff',
               },
-              secondary: {
-                DEFAULT: '#F9A825', // A warm, inviting gold/yellow
-                light: '#FFD54F',
+              'dark-blue': {
+                900: '#0b132b', // Main background
+                800: '#1c2541', // Card background
+                700: '#3a506b', // Borders, other elements
+              },
+              'light-text': {
+                DEFAULT: '#E0E1DD', // Main text
+                secondary: '#BDBDBD', // Muted text
+                heading: '#FFFFFF', // Headings
               },
               accent: {
                 DEFAULT: '#4CAF50', // A vibrant green for CTAs
-              },
-              neutral: {
-                100: '#F5F5F5',
-                200: '#EEEEEE',
-                500: '#9E9E9E',
-                800: '#424242',
-                900: '#212121',
+                dark: '#45a049',
               },
             }
           }
